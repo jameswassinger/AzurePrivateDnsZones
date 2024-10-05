@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg-pdz" {
-  name     = "${var.resource_group_name}"
+  name     = var.resource_group_name
   location = var.location
 }
 
@@ -15,7 +15,7 @@ module "pdzs" {
   depends_on = [azurerm_resource_group.rg-pdz]
   # The function toset() is used to convert the list of private DNS zone names to a set.
   for_each                     = toset(var.private_dns_zone_names)
-  existing_resource_group_name = "${var.resource_group_name}"
+  existing_resource_group_name = var.resource_group_name
   private_dns_zone_name        = each.value
   managment_vnet_id            = data.azurerm_virtual_network.management.id
   management_vnet_name         = data.azurerm_virtual_network.management.name
