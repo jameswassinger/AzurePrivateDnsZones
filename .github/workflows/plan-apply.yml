@@ -17,8 +17,6 @@ jobs:
     pdz-plan:
         name: 'Private DNS Zone Deployment Plan'
         runs-on: ubuntu-latest
-        env:
-            ARM_SKIP_PROVIDER_REGISTRATION: true
 
         steps:
             # Checkout the repository to the GitHub Actions runner
