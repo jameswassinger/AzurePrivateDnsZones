@@ -10,7 +10,7 @@ data "azurerm_virtual_network" "management" {
 }
 
 module "pdzs" {
-  source = "../../modules/pdz"
+  source = "modules/pdz"
   # depends_on required to ensure the resource group is created before the private DNS zones
   depends_on = [azurerm_resource_group.rg-pdz]
   # The function toset() is used to convert the list of private DNS zone names to a set.
