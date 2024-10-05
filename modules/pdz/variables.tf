@@ -19,5 +19,5 @@ variable "managment_vnet_id" {
 variable "management_vnet_name" {
   description = "The name of the management VNet"
   type        = string
-  
+
 }
