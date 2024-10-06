@@ -5,7 +5,7 @@ name: 'PDZ Configuration Drift Detection'
 on:
   workflow_dispatch: 
   schedule:
-    - cron: '*/5 * * * *' # runs nightly at 3:41 am
+    - cron: '0 0 * * *' # runs nightly at 3:41 am
 
 #Special permissions required for OIDC authentication
 permissions:
