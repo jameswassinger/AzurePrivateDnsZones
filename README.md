@@ -7,7 +7,3 @@ Setup of a single resource group to centralize Azure Private Endpoint private DN
 
 ### Simplified View
 ![Simplified Azure Private DNS Zone resolution](./assets/simple-dns-view.png)
-
-## Details
-
-For addtional details and usage see, [jameswassinger.com](https://jameswassinger.com)
